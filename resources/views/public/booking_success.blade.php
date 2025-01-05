@@ -25,7 +25,7 @@
                                 <p>#{{ $booking->booking_id }}</p>
                                 <p>{{ $booking->tour->name }}</p>
                                 <p>{{ $booking->number_of_people }}</p>
-                                <p>${{ number_format($booking->total_price, 2) }}</p>
+                                <p>{{ number_format($booking->total_price, 2) }} JOD</p>
                                 <p><span class="badge bg-warning">{{ ucfirst($booking->status) }}</span></p>
                             </div>
                         </div>

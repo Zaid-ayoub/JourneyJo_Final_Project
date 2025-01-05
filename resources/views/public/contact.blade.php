@@ -97,5 +97,21 @@
         return true; // Allow form submission if authenticated
     }
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        @if (session('success'))
+            Swal.fire({
+                title: 'Success!',
+                text: "{{ session('success') }}",
+                icon: 'success',
+                confirmButtonText: 'OK',
+                customClass: {
+                    confirmButton: 'btn btn-primary'
+                },
+                buttonsStyling: false
+            });
+        @endif
+    });
+</script>
 
 @endsection

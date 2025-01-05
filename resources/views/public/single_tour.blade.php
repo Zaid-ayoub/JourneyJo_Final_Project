@@ -131,9 +131,9 @@
                                     <div class="col d-grid">
                                         @if (auth('public_user')->check())
                                             <a href="{{ route('public.booking.form', $tour->tour_id) }}"
-                                                class="btn btn-success btn-lg">Book Now</a>
+                                                class="btn btn-success btn-lg rounded-pill">Book Now</a>
                                         @else
-                                            <button type="button" class="btn btn-success btn-lg"
+                                            <button type="button" class="btn btn-success btn-lg rounded-pill"
                                                 onclick="promptLogin()">Book Now</button>
                                         @endif
                                     </div>

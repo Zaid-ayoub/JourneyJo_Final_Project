@@ -62,7 +62,7 @@
 
                                 <!-- Budget -->
                                 <div class="col-md-6 mb-3">
-                                    <label for="budget" class="form-label">Budget per Person ($)</label>
+                                    <label for="budget" class="form-label">Budget per Person (JOD)</label>
                                     <input type="number" class="form-control" id="budget" name="budget" min="0"
                                         placeholder="Enter budget" required>
                                 </div>
@@ -134,6 +134,20 @@
 
             return true; // Allow form submission if authenticated
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            @if (session('success'))
+                Swal.fire({
+                    title: 'Success!',
+                    text: "{{ session('success') }}",
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        confirmButton: 'btn btn-primary'
+                    },
+                    buttonsStyling: false
+                });
+            @endif
+        });
     </script>
     <style>
         .form-label {

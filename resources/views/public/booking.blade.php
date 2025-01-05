@@ -48,8 +48,8 @@
 
                             <!-- Total Price -->
                             <div class="alert alert-info mt-3">
-                                <strong>Price per Person:</strong> ${{ $tour->price }}<br>
-                                <strong>Total Price:</strong> <span id="totalPrice">${{ $tour->price }}</span>
+                                <strong>Price per Person:</strong>{{ $tour->price }} JOD<br>
+                                <strong>Total Price:</strong> <span id="totalPrice">{{ $tour->price }} JOD</span>
                             </div>
 
                             <div class="text-end mt-4">
@@ -153,7 +153,7 @@
             const totalPrice = numPeople * pricePerPerson;
 
             document.getElementById('summaryNumPeople').textContent = numPeople;
-            document.getElementById('summaryTotalPrice').textContent = '$' + totalPrice;
+            document.getElementById('summaryTotalPrice').textContent = totalPrice + ' JOD';
 
             // Set hidden input value
             document.getElementById('hiddenNumberOfPeople').value = numPeople;
@@ -174,7 +174,7 @@
             const pricePerPerson = {{ $tour->price }};
             const totalPrice = numPeople * pricePerPerson;
 
-            document.getElementById('totalPrice').textContent = '$' + totalPrice;
+            document.getElementById('totalPrice').textContent = totalPrice + 'JOD';
             document.getElementById('total_price_input').value = totalPrice;
         });
         // Set initial total price
